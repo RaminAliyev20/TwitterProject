@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_likes_table
+      author: your_author
+
+      changes:
+        - createTable:
+            tableName: likes
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: twit_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_likes_to_twits
+                    references: twits(id)
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_likes_to_users
+                    references: users(id)
+              - column:
+                  name: created_at
+                  type: timestamp
+                  defaultValue: now()
+                  constraints:
+                    nullable: false

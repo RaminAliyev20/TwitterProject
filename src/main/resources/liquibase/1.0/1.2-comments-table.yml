@@ -1,0 +1,45 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_comments_table
+      author: your_author
+
+      changes:
+        - createTable:
+            tableName: comments
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: comment
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: twit_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_comments_to_twits
+                    references: twits(id)
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_comments_to_users
+                    references: users(id)
+              - column:
+                  name: created_at
+                  type: timestamp
+                  defaultValue: now()
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: timestamp
+                  defaultValue: now()
+                  constraints:
+                    nullable: false
