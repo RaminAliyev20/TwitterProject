@@ -36,9 +36,9 @@ public class UserEntity {
     @OneToMany(mappedBy = "user")
     List<TwitEntity> twitEntityList;
     @JsonBackReference
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "userEntity")
+    @OneToMany(mappedBy = "userEntity")
     List<LikeEntity> likeEntities;
     @JsonBackReference
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    @OneToMany(mappedBy = "user")
     List<CommentEntity> commentEntities;
 }

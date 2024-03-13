@@ -27,10 +27,10 @@ public class CommentEntity {
     LocalDateTime updatedAt;
     @JsonManagedReference
     @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "twit_id")
+    @JoinColumn(name = "twit_id", referencedColumnName = "id")
     TwitEntity twitEntity;
     @JsonManagedReference
     @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
     UserEntity user;
 }

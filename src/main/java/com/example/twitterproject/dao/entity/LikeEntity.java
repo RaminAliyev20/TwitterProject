@@ -25,10 +25,10 @@ public class LikeEntity {
 
     @JsonManagedReference
     @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "twit_id")
+    @JoinColumn(name = "twit_id", referencedColumnName = "id")
     TwitEntity twit;
     @JsonManagedReference
     @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
     UserEntity userEntity;
 }

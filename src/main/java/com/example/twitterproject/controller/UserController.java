@@ -1,6 +1,8 @@
 package com.example.twitterproject.controller;
 
+import com.example.twitterproject.model.dto.SimpleMessageDto;
 import com.example.twitterproject.model.dto.UserDto;
+import com.example.twitterproject.model.dto.requestDto.TwitRequestDto;
 import com.example.twitterproject.model.dto.requestDto.UserRequestDto;
 import com.example.twitterproject.service.UserService;
 import org.springframework.web.bind.annotation.*;
@@ -44,4 +46,5 @@ public class UserController {
         userService.deleteUser(id);
         return "Deleted!";
     }
+
 }

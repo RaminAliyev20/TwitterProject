@@ -12,8 +12,6 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 
 public class CommentRequestDto {
-
-    Long id;
     String comment;
 
     Long twit_id;

@@ -22,7 +22,7 @@ public class CommentDto {
     Long id;
     String comment;
 
-    TwitEntity twitEntity;
+    Long twit_id;
 
-    UserEntity user;
+    Long user_id;
 }

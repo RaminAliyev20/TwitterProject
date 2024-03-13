@@ -14,8 +14,6 @@ import lombok.experimental.FieldDefaults;
 
 public class LikeRequestDto {
 
-    Long id;
-
     Long twit_id;
 
     Long user_id;

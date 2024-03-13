@@ -29,32 +29,7 @@ public class TwitDto {
     Long user_id;
 
 
-//    List<LikeEntity> likeEntityList;
+//    List<Long> likesId;
 //
-//    List<CommentEntity> commentEntities;
-
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTwit() {
-        return twit;
-    }
-
-    public void setTwit(String twit) {
-        this.twit = twit;
-    }
-
-    public Long getUser_id() {
-        return user_id;
-    }
-
-    public void setUser_id(Long user_id) {
-        this.user_id = user_id;
-    }
+//    List<Long> commentsId;
 }
