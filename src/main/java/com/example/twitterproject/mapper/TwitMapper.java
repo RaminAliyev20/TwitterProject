@@ -17,6 +17,7 @@ public abstract class TwitMapper {
     @Mapping(target = "user.id", source = "user_id")
     public abstract TwitEntity mapRequestDtoToEntity(TwitRequestDto twitRequestDto);
 
+    @Mapping(target = "user_id", source = "user.id")
     public abstract TwitDto mapEntityToDto(TwitEntity twitEntity);
 
     public abstract List<TwitDto> mapEntitiesToDto(List<TwitEntity> twitEntityList);

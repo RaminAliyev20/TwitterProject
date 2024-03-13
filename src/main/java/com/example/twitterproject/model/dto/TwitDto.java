@@ -4,6 +4,7 @@ import com.example.twitterproject.dao.entity.CommentEntity;
 import com.example.twitterproject.dao.entity.LikeEntity;
 import com.example.twitterproject.dao.entity.UserEntity;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
@@ -20,11 +21,12 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-
+@JsonIgnoreProperties("user")
 public class TwitDto {
 
     Long id;
     String twit;
+
 
     Long user_id;
 

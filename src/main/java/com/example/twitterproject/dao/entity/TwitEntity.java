@@ -1,6 +1,7 @@
 package com.example.twitterproject.dao.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
@@ -18,6 +19,8 @@ import java.util.List;
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Table(name = "twits")
+@JsonIgnoreProperties("user")
+
 public class TwitEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

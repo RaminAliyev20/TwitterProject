@@ -30,8 +30,8 @@ public class UserDto {
 
     List<TwitEntity> twitEntityList;
 
-    List<LikeDto> likeDtos;
+    List<LikeEntity> likeEntities;
 
-    List<CommentDto> commentDtos;
+    List<CommentEntity> commentEntities;
 
 }
