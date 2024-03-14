@@ -23,5 +23,5 @@ public class LikeDto {
 
     TwitEntity twit;
 
-    Long user_id;
+    UserEntity user;
 }

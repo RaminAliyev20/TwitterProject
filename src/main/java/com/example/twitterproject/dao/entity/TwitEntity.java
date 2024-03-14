@@ -20,7 +20,6 @@ import java.util.List;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Table(name = "twits")
 @JsonIgnoreProperties("user")
-
 public class TwitEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
