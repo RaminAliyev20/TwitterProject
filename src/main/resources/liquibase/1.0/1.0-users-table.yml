@@ -13,31 +13,31 @@ databaseChangeLog:
                   constraints:
                     primaryKey: true
                     nullable: false
-                    remarks: id of users
+              - column:
+                  name: firstname
+                  type: varchar(64)
+              - column:
+                  name: lastname
+                  type: varchar(255)
               - column:
                   name: username
                   type: varchar(255)
+              - column:
+                  name: phone_number
+                  type: varchar(32)
                   constraints:
-                    nullable: false
+                    unique: true
+              - column:
+                  name: email
+                  type: varchar(64)
+                  constraints:
                     unique: true
               - column:
                   name: password
                   type: varchar(255)
-                  constraints:
-                    nullable: false
-              - column:
-                  name: firstname
-                  type: varchar(255)
-                  constraints:
-                    nullable: false
-              - column:
-                  name: lastname
-                  type: varchar(128)
-                  constraints:
-                    nullable: false
               - column:
                   name: gender
-                  type: varchar(32)
+                  type: varchar(16)
               - column:
                   name: created_at
                   type: timestamp

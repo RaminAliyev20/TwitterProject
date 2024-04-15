@@ -25,7 +25,7 @@ public class TwitController {
     @PostMapping
     public SimpleMessageDto addTwit(@RequestBody TwitRequestDto twitRequestDto) {
         twitService.addTwit(twitRequestDto);
-        return new SimpleMessageDto("Successfully added");
+        return new SimpleMessageDto("Successfully added!");
     }
 
     @GetMapping("/{id}")

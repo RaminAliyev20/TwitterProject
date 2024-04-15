@@ -22,10 +22,12 @@ import java.util.List;
 public class UserDto {
 
     Long id;
-    String username;
-    String password;
     String firstname;
     String lastname;
+    String username;
+    String phoneNumber;
+    String email;
+    String password;
     String gender;
 
     List<TwitEntity> twitEntityList;

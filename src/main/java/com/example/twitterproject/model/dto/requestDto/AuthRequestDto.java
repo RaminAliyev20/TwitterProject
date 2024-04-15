@@ -1,15 +1,15 @@
-package com.example.twitterproject.model.dto;
+package com.example.twitterproject.model.dto.requestDto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Builder
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class SimpleMessageDto {
-    public String simpleMessage;
-
+public class AuthRequestDto {
+    private String email;
+    String password;
 }

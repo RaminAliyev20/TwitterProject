@@ -1,10 +1,16 @@
 package com.example.twitterproject.controller;
 
+
+
+
+
+
 import com.example.twitterproject.model.dto.SimpleMessageDto;
 import com.example.twitterproject.model.dto.UserDto;
 import com.example.twitterproject.model.dto.requestDto.TwitRequestDto;
 import com.example.twitterproject.model.dto.requestDto.UserRequestDto;
 import com.example.twitterproject.service.UserService;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,9 +31,9 @@ public class UserController {
     }
 
     @PostMapping
-    public String addUser(@RequestBody UserRequestDto userRequestDto) {
+    public SimpleMessageDto addUser(@RequestBody UserRequestDto userRequestDto) {
         userService.addUser(userRequestDto);
-        return "Saved!";
+        return new SimpleMessageDto("added");
     }
 
     @GetMapping("/{id}")
